@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="@string/search_hint"
+            app:iconifiedByDefault="false">
+        </androidx.appcompat.widget.SearchView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_item_day_recipes"
+            android:layout_below="@id/searchView">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</layout>

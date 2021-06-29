@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_initUserInfoFragment"
+            app:destination="@id/initUserInfoFragment"
+            app:popUpTo="@id/chooseLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.fragments.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_initUserInfoFragment"
+            app:destination="@id/initUserInfoFragment"
+            app:popUpTo="@id/chooseLoginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initUserInfoFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.login.InitUserInfoFragment"
+        android:label="InitUserInfoFragment"
+        tools:layout="@layout/fragment_init_user_info">
+        <action
+            android:id="@+id/action_initUserInfoFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment"
+            app:popUpTo="@id/chooseLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseLoginFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.login.ChooseLoginFragment"
+        android:label="ChooseLoginFragment"
+        tools:layout="@layout/fragment_choose_login">
+        <action
+            android:id="@+id/action_chooseLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/chooseLoginFragment" />
+        <action
+            android:id="@+id/action_chooseLoginFragment_to_initUserInfoFragment"
+            app:destination="@id/initUserInfoFragment"
+            app:popUpTo="@id/chooseLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.menu.MainMenuFragment"
+        android:label="MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_dayMenuFragment"
+            app:destination="@id/dayMenuFragment"
+            app:popUpTo="@id/mainMenuFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/dayMenuFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.menu.DayMenuFragment"
+        android:label="DayMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+        <argument
+            android:name="day"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dayMenuFragment_to_complexRecipeFragment"
+            app:destination="@id/complexRecipeFragment"
+            app:popUpTo="@id/dayMenuFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.userProfile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment"
+            app:popUpTo="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.menu.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomNavigationSearch"
+        android:name="es.uam.eps.tfg.menuPlanner.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/complexRecipeFragment"
+        android:name="es.uam.eps.tfg.menuPlanner.menu.ComplexRecipeFragment"
+        android:label="ComplexRecipeFragment"
+        tools:layout="@layout/fragment_recipe_complex">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

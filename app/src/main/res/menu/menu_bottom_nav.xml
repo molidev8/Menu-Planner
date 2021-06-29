@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/search"
+        android:id="@+id/bottomNavigationSearch"
+        android:icon="@drawable/ic_search_black_24dp">
+    </item>
+
+    <item android:title="@string/menu"
+        android:id="@+id/mainMenuFragment"
+        android:icon="@drawable/ic_restaurant_menu_black_24dp">
+    </item>
+
+    <item android:title="@string/profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_account_circle_black_24dp">
+    </item>
+
+
+</menu>
