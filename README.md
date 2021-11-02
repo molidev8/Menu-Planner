@@ -1,11 +1,11 @@
 # Menu Planner Android App
-Android app developed for my bachelor thesis in IT engineering to generate custom weekly food menus.
+Aplicación Android desarrollada para mi TFG en Ingeniería Informática para generar menús semanales.
 
-This app generates a weekly menu, including breakfast, meal and dinner for each day. Every menu is generated based on different parameters provided by the user related to his physical condition and preferred foods.
+Esta app genera un menú semanal, con el desayuno, comida y cena para cada día. Cada menú se genera basándose en diferentes parámetros proporcionados por el usuario en función de su condición física y sus comidas favoritas. De este modo el algoritmo de recomendación se adapta a cada usuario y va aprendiendo de sus gustos según va utilizando la aplicación.
 
-The app follows the MVVM architecture, with a repository that has local data in a Room database, remote data in Firebase and uses Spoonacular API to obtain the recipes through Retrofit.
+La aplicación sigue el patrón de presentación MVVM, con un repositorio que gestiona una base de datos local con Room, un repositorio remoto en Firebase y utiliza la API de Spoonacular para obtener las recetas a través de Retrofit.
 
-You can check how the app works and its interface reading the bachelor thesis written in spanish here: https://repositorio.uam.es/handle/10486/693402
+Puedes ver como funciona la aplicación y su interfaz consultando la memoria del TFM en el siguiente enlace: https://repositorio.uam.es/handle/10486/693402
 
-**Requisites:**
-In order to use the app, you need to get a new Spoonacular API key, add it as a string resource and create a new Firebase project that needs to be linked later to the Android Studio project in order to use the remote database and the authentication system.
+**Requisitos:**
+Para poder utilizar la aplicación es necesario conseguir una key de la API de Spoonacular, añadirla al proyecto y crear un nuevo proyecto en Firebase enlazado al proyecto de Android Studio para poder utilizar la base de datos remota y el sistema de autenticación.
